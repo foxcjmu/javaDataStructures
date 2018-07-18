@@ -35,13 +35,13 @@ public class LinkedStack<T> implements Stack<T> {
   }
 
   @Override
-  public T top() throws IllegalStateException {
+  public T top() {
     if (topPtr == null) throw new IllegalStateException("top of an empty stack");
     return topPtr.item;
   }
 
   @Override
-  public T pop() throws IllegalStateException {
+  public T pop() {
     if (topPtr == null) throw new IllegalStateException("pop of an empty stack");
     T result = topPtr.item;
     topPtr = topPtr.next;

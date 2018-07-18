@@ -71,7 +71,6 @@ public class DoublyLinkedList<T> implements List<T>
     Node newNode = new Node(item,cursorPtr,cursorPtr.pred);
     cursorPtr.pred = cursorPtr.pred.succ = newNode;
     cursorPtr = newNode;
-    cursorIndex = i;
     count++;
   }
 

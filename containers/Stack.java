@@ -7,8 +7,7 @@ package containers;
  * Every Stack implements this interface.
  * @author C. Fox
  */
-public interface Stack<T> extends Container
-{
+public interface Stack<T> extends Container {
   /**
    * Add a value to the top of the stack.
    * 

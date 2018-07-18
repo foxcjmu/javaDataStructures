@@ -11,7 +11,7 @@ public class ArrayStack<T> implements Stack<T> {
   public static final int INITIAL_SIZE = 8;
 
   private T[] store;  // contents of the stack
-  private int count;  // top is at store[count]
+  private int count;  // top is at store[count-1]
 
   public ArrayStack() { this(INITIAL_SIZE); }
 
@@ -43,13 +43,13 @@ public class ArrayStack<T> implements Stack<T> {
   }
 
   @Override
-  public T top() throws IllegalStateException {
+  public T top() {
     if (count == 0) throw new IllegalStateException("top of an empty stack");
     return store[count-1];
   }
 
   @Override
-  public T pop() throws IllegalStateException {
+  public T pop() {
     if (count == 0) throw new IllegalStateException("pop of an empty stack");
     return store[--count];
   }
